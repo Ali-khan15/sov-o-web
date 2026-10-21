@@ -1,0 +1,141 @@
+/* Keep the section heading with its explanation. */
+.exact-faq .faq-answer a{color:var(--purple);text-decoration:underline;text-underline-offset:3px}
+.exact-how>.container>.walkthrough-cta{display:flex;flex-direction:column;align-items:flex-start;gap:16px;margin:64px 0 80px}
+.exact-how>.container>.walkthrough-cta>p{font-size:20px;color:#fff;margin:0}
+@media(max-width:600px){.exact-how>.container>.walkthrough-cta{margin:56px 0 64px}.exact-how>.container>.walkthrough-cta>p{font-size:18px}}
+.exact-first .exact-pending-grid{max-width:none;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:24px;align-items:start}
+.exact-first> .container>h2{max-width:1100px}
+.exact-first .founding-tutor-card{display:grid;grid-template-columns:minmax(0,1fr);align-items:start;gap:22px;padding:28px 32px}
+.exact-first .founding-tutor-card ul{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin:0;padding-left:20px}
+.exact-first .founding-tutor-card li{font-size:15px;line-height:1.8}
+.exact-first .founder-note{display:grid;grid-template-columns:88px minmax(0,1fr);column-gap:24px;row-gap:14px;padding:28px;align-items:start}
+.exact-first .founder-portrait{grid-column:1;grid-row:1 / 3;width:88px;height:88px;margin:0;align-self:start}
+.exact-first .founder-note p{grid-column:2;min-width:0;font-size:16px;line-height:1.85}
+.exact-first .founder-note footer{grid-column:2;margin:0}
+@media(max-width:800px){.exact-first .exact-pending-grid{grid-template-columns:minmax(0,1fr)}.exact-first .founding-tutor-card{gap:18px}}
+@media(max-width:600px){.exact-first .founding-tutor-card,.exact-first .founder-note{padding:24px}.exact-first .founding-tutor-card ul{grid-template-columns:1fr;gap:14px}.exact-first .founder-note{grid-template-columns:minmax(0,1fr);gap:18px}.exact-first .founder-portrait{grid-column:1;grid-row:auto;width:88px;height:88px}.exact-first .founder-note p,.exact-first .founder-note footer{grid-column:1}.exact-first .founder-note p,.exact-first .founding-tutor-card li{font-size:15px}}
+.exact-how h2.walkthrough-title{font-size:32px;line-height:1.2;color:#fff;margin:36px 0 16px;font-weight:600}
+.walkthrough-title+.app-walkthrough{margin-top:0}
+.founder-portrait{position:relative;overflow:hidden;width:96px;height:96px;border-radius:50%;margin-bottom:20px;background:#eee8fc}
+.founder-portrait img{position:absolute;width:126%;max-width:none;height:auto;left:50%;top:50%;transform:translate(-50%,-53.8%)}
+@media(max-width:600px){.exact-how h2.walkthrough-title{font-size:26px}}
+.founder-note{margin:0;padding:26px 28px;background:#fff;border:1px solid #dfd3f6;border-left:4px solid var(--purple);border-radius:16px}
+.exact-first .founder-note p{font-size:16px;line-height:1.85;color:var(--ink);margin:0}
+.founder-note footer{font-size:14px;line-height:1.7;font-weight:600;color:var(--purple);margin-top:18px}
+@media(max-width:600px){.founder-note{padding:22px}.exact-first .founder-note p{font-size:15px}}
+.founding-tutor-card{padding:26px 28px;background:#fff;border:1px solid #dfd3f6;border-radius:16px;box-shadow:0 8px 24px #683de508}
+.exact-first .founding-tutor-intro{font-size:17px;line-height:1.7;color:var(--ink);margin:0}
+.founding-tutor-intro strong{font-weight:600;color:var(--purple)}
+.founding-tutor-card ul{padding-left:20px;margin:18px 0 0;display:grid;gap:12px}
+.founding-tutor-card li{font-size:14px;line-height:1.8;color:var(--muted);padding-left:4px}
+.founding-tutor-card li::marker{color:var(--purple)}
+@media(max-width:600px){.founding-tutor-card{padding:22px}.exact-first .founding-tutor-intro{font-size:16px}.founding-tutor-card li{font-size:14px}}
+.application-steps{margin-top:36px;padding-top:0}
+.application-steps ol{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;list-style:none;margin:0;padding:0}
+.application-steps li{display:flex;flex-direction:column;align-items:flex-start;gap:15px;color:var(--ink);font-size:16px;font-weight:500;line-height:1.65;white-space:normal;padding:22px 20px;background:#f7f4ff;border:1px solid #e5dcfa;border-radius:16px;min-width:0}
+.application-step-number{display:grid;place-items:center;width:36px;height:36px;flex-shrink:0;border-radius:50%;background:var(--purple);color:#fff;font-size:17px;font-weight:600;line-height:1}
+.application-steps li:nth-child(even){background:#effaf5;border-color:#d6ecdf}
+.application-steps li:nth-child(even) .application-step-number{background:#3fdaa2;color:#164f37}
+@media(max-width:1000px){.application-steps ol{grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.application-steps li{font-size:16px;padding:20px}}
+@media(max-width:600px){.application-steps{margin-top:28px}.application-steps ol{grid-template-columns:1fr;gap:12px}.application-steps li{flex-direction:row;align-items:center;gap:15px;font-size:16px;padding:19px 18px}.application-step-number{width:34px;height:34px}}
+.exact-start>.exact-split{grid-template-areas:"label label" "title title" "photo copy";column-gap:60px;row-gap:16px;align-items:center}
+.exact-start>.exact-split>div:first-child{display:contents}
+.exact-start>.exact-split>div:first-child>.eyebrow{grid-area:label;margin:0}
+.exact-start>.exact-split>div:first-child>h2{grid-area:title;max-width:none;margin:0 0 14px;font-size:clamp(24px,3vw,39px)}
+.exact-start .started-photo-wrap{grid-area:photo;margin-top:0}
+.exact-start>.exact-split>div:nth-child(2){grid-area:copy;text-align:left;align-self:center}
+.exact-start>.exact-split>div:nth-child(2)>.exact-cta{justify-content:flex-start}
+@media(min-width:801px){.exact-start>.exact-split>div:first-child>h2{white-space:nowrap}}
+@media(max-width:600px){
+ .exact-start>.exact-split{grid-template-columns:1fr;grid-template-areas:"label" "title" "photo" "copy";gap:20px}
+ .exact-start>.exact-split>div:first-child>h2{font-size:30px;margin:0;white-space:normal}
+ .exact-start .started-photo-wrap{margin:0 auto}
+}
+.exact-problem>.exact-split{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:52px;align-items:center}
+.problem-photo-wrap{margin-top:0;max-width:360px}
+.exact-problem-copy h2{font-size:34px;line-height:1.3;margin-bottom:22px}
+.exact-problem{padding-block:58px}
+
+/* Description and navigation share a column beside the app screen. */
+.exact-how{padding-block:54px}
+.exact-how h2{font-size:34px;max-width:900px}
+.exact-how-lead{margin-top:16px;font-size:22px;line-height:1.6;font-weight:500;color:#fff}
+.app-walkthrough{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,250px);grid-template-areas:"copy screen" "navigation screen";grid-template-rows:1fr 1fr;column-gap:42px;row-gap:22px;width:100%;max-width:940px;margin:24px auto 0;padding:24px 32px}
+.walkthrough-panel{display:contents;min-height:0;padding:0}
+.walkthrough-panel[hidden]{display:none!important}
+.walkthrough-copy{grid-area:copy;align-self:end;max-width:490px}
+.walkthrough-copy .walkthrough-step-label{margin-bottom:12px}
+.walkthrough-copy h3{font-size:25px}
+.walkthrough-copy>p:not(.walkthrough-step-label){font-size:14px;margin-top:13px}
+.walkthrough-figure{grid-area:screen;align-self:center}
+.walkthrough-phone{width:clamp(165px,25svh,230px);max-width:100%;border-width:5px;border-radius:28px}
+.walkthrough-screen{border-radius:23px}
+.walkthrough-figure figcaption{margin-top:10px;font-size:9px}
+.walkthrough-navigation{grid-area:navigation;align-self:start;display:flex;justify-content:flex-start;gap:14px;flex-wrap:wrap;padding-top:16px;max-width:490px}
+.walkthrough-navigation>button{font-size:11px;padding:9px 13px;min-height:42px}
+.walkthrough-progress{font-size:10px;white-space:nowrap}
+.walkthrough-closing{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);align-items:center;gap:40px;max-width:none;margin:24px 0 30px}
+.walkthrough-closing .walkthrough-photo-wrap{width:100%;max-width:260px;margin:0}
+.walkthrough-closing>.exact-cta{margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.walkthrough-closing>.exact-cta>p{font-size:22px;color:white}
+.walkthrough-closing .button{white-space:nowrap}
+.walkthrough-benefits-copy{min-width:0}
+.walkthrough-benefits-copy .exact-info-grid{margin:0;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px 24px}
+.walkthrough-benefits-copy .exact-info-grid h3{color:#fff;font-size:16px;margin-top:12px}
+.walkthrough-benefits-copy .exact-info-grid p{color:#ded5f5;font-size:13px;line-height:1.8;margin-top:7px}
+.walkthrough-benefits-copy .exact-cta{margin-top:25px;justify-content:flex-start;gap:18px}
+.walkthrough-benefits-copy .exact-cta>p{color:#fff;font-size:18px}
+@media(min-width:601px) and (max-width:1000px){.walkthrough-closing{grid-template-columns:220px minmax(0,1fr);gap:28px}.walkthrough-benefits-copy .exact-info-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.walkthrough-benefits-copy .exact-info-grid h3{font-size:15px}}
+@media(min-width:1001px){
+ .app-walkthrough{max-width:1220px;grid-template-columns:minmax(0,1fr) minmax(250px,340px);column-gap:64px;padding:30px 44px}
+ .walkthrough-copy,.walkthrough-navigation{max-width:650px}
+ .walkthrough-copy h3{font-size:clamp(28px,2.3vw,34px)}
+ .walkthrough-copy>p:not(.walkthrough-step-label){font-size:17px;line-height:1.8}
+ .walkthrough-copy .walkthrough-step-label{font-size:12px}
+ .walkthrough-phone{width:clamp(220px,32svh,290px);border-width:6px;border-radius:33px}
+ .walkthrough-screen{border-radius:27px}
+ .walkthrough-navigation>button{font-size:13px;min-height:46px;padding:11px 18px}
+ .walkthrough-progress{font-size:12px}
+ .walkthrough-figure figcaption{font-size:11px}
+}
+@media(max-width:1000px) and (min-width:601px){
+ .exact-problem>.exact-split{gap:32px}.exact-problem-copy h2{font-size:29px}
+ .app-walkthrough{column-gap:25px;padding:22px;grid-template-columns:minmax(0,1fr) 210px}
+ .walkthrough-copy h3{font-size:23px}.walkthrough-navigation{gap:10px}
+}
+@media(max-width:600px){
+ .exact-problem>.exact-split{display:flex;flex-direction:column;gap:25px}
+ .exact-problem-copy{display:contents}.exact-problem-copy h2{order:0;font-size:29px;margin:0}
+ .exact-problem>.exact-split>div:first-child{order:1}.exact-problem-copy>p{order:2}.exact-problem-copy>.exact-cta{order:3;margin-top:0}
+ .problem-photo-wrap{max-width:330px;margin:0 auto}
+ .exact-how{padding-block:40px}.exact-how h2{font-size:28px}
+ .exact-how-lead{font-size:18px;line-height:1.65}
+ .app-walkthrough{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"copy" "navigation" "screen";gap:17px;padding:20px 18px;margin-top:22px}
+ .walkthrough-copy h3{font-size:21px}.walkthrough-copy>p:not(.walkthrough-step-label){font-size:13px}
+ .walkthrough-navigation{padding-top:13px;gap:10px;justify-content:space-between;flex-wrap:nowrap}
+ .walkthrough-navigation>button{font-size:10px;padding:9px 11px}.walkthrough-progress{font-size:9px}
+ .walkthrough-phone{width:clamp(165px,26svh,205px)}
+ .walkthrough-closing{grid-template-columns:1fr;gap:24px;margin-top:25px}
+ .walkthrough-closing .walkthrough-photo-wrap{max-width:260px;margin-inline:auto}
+ .walkthrough-benefits-copy .exact-info-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 20px}
+ .walkthrough-benefits-copy .exact-info-grid h3{font-size:14px}.walkthrough-benefits-copy .exact-info-grid p{font-size:12px}
+ .walkthrough-closing>.exact-cta>p{font-size:18px}.walkthrough-closing .button{font-size:12px;padding:13px 14px;min-height:48px;gap:8px;white-space:normal}
+ .walkthrough-closing .button .icon{width:15px;height:15px;flex-shrink:0}
+}
+@media(max-width:360px){.app-walkthrough{padding-inline:13px}.walkthrough-navigation{gap:7px}.walkthrough-navigation>button{padding-inline:9px}.walkthrough-closing{gap:13px}.walkthrough-closing .button{font-size:11px;padding-inline:11px}}
+
+/* Place the intro CTA beneath its photo, with benefits beside both. */
+.walkthrough-closing{grid-template-areas:"photo benefits";grid-template-rows:auto;row-gap:38px;align-items:center}
+.walkthrough-closing .walkthrough-photo-wrap{grid-area:photo;align-self:center}
+.walkthrough-benefits-copy{display:contents}
+.walkthrough-benefits-copy>.exact-info-grid{grid-area:benefits;align-self:center}
+.walkthrough-benefits-copy>.exact-cta{grid-area:cta;margin:0;max-width:260px;width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.walkthrough-benefits-copy>.exact-cta>p{font-size:20px}
+.walkthrough-benefits-copy>.exact-cta>.button{width:100%;font-size:14px;padding:14px;gap:10px;justify-content:center;min-height:52px}
+@media(max-width:1000px) and (min-width:601px){.walkthrough-benefits-copy>.exact-cta>.button{font-size:12px;padding-inline:10px}}
+@media(max-width:600px){.walkthrough-closing{grid-template-areas:"photo" "benefits";row-gap:32px}.walkthrough-benefits-copy>.exact-cta{margin-inline:auto}.walkthrough-benefits-copy>.exact-cta>p{font-size:20px}}
+.walkthrough-navigation{flex-wrap:wrap}
+.walkthrough-navigation>.walkthrough-cta{flex:0 0 100%;margin:18px 0 0;display:flex;flex-direction:column;align-items:flex-start;gap:13px}
+.walkthrough-cta>p{font-size:20px;font-weight:500;color:#fff}
+.walkthrough-cta .button{font-size:16px;min-height:54px;padding:15px 24px}
+@media(max-width:600px){.walkthrough-navigation>.walkthrough-cta{margin-top:13px}.walkthrough-cta>p{font-size:18px}.walkthrough-cta .button{font-size:15px}}

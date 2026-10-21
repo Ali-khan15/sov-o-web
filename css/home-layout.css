@@ -1,0 +1,487 @@
+/* ==========================================================================
+   SOV-O homepage, mockup layout applied to the original sections.
+   Loaded AFTER style.css and responsive.css. Layout only.
+
+   This file does not change colours, backgrounds, fonts, container widths,
+   copy or imagery. It only rearranges three sections to match the client
+   layout reference:
+     1. hero, supporting list and button row added beneath the text
+     2. how it works, the two existing groups become tabs, steps sit in a grid
+   Everything else on the page is untouched.
+   ========================================================================== */
+
+/* --- 1. hero ----------------------------------------------------------- */
+
+.banner_section .banner_text p {
+    max-width: 480px;
+}
+
+/* supporting labels */
+
+.banner_section .banner_usp {
+    list-style: none;
+    margin: 26px 0 30px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.banner_section .banner_usp li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 13px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--secondary);
+    white-space: nowrap;
+    box-shadow: 0 2px 12px rgba(50, 35, 111, .06);
+}
+
+.banner_section .banner_usp i {
+    font-size: 13px;
+}
+
+.banner_section .banner_usp .usp_paid {
+    color: var(--primary);
+}
+
+.banner_section .banner_usp .usp_volunteer {
+    color: #14b8a6;
+}
+
+.banner_section .banner_usp .usp_secure {
+    color: var(--primary);
+}
+
+/* button row, all three on one line */
+
+.banner_section .app_btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 0;
+}
+
+/* the theme adds margin-left:25px to the last item, which indented See How
+   It Works whenever the row wrapped */
+.banner_section .app_btn li,
+.banner_section .app_btn li:last-child {
+    margin: 0;
+}
+
+/* the theme sizes these at 210px on a dark purple ground; the reference has
+   compact black pills, so the padding shrinks and the white lockup is shown
+   in place of the purple one */
+.banner_section .app_btn li a {
+    background-color: #000;
+    padding: 11px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.banner_section .app_btn li a:hover {
+    background-color: #1c1c1c;
+}
+
+.banner_section .app_btn li a .blue_img {
+    display: none;
+}
+
+.banner_section .app_btn li a .white_img {
+    position: static;
+    left: auto;
+    transform: none;
+    opacity: 1;
+    max-width: 104px;
+    height: auto;
+    display: block;
+}
+
+/* when the column is too narrow for all three, the badges take the first row
+   and this sits flush beneath them rather than trailing off the end */
+/* the official Google Play badge already carries its own black ground and
+   rounded corners, so this one drops the CSS pill and is sized to match the
+   App Store button's height */
+.banner_section .app_btn li.gp_item a {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+.banner_section .app_btn li.gp_item a:hover {
+    background: none;
+    opacity: .85;
+}
+
+.banner_section .app_btn li.gp_item img {
+    display: block;
+    height: 48px;
+    width: auto;
+    max-width: none;
+}
+
+.banner_section .app_btn li.how_link {
+    flex-basis: auto;
+    margin-left: 0;
+}
+
+.banner_section .app_btn li.how_link .how_btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    background: var(--white);
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    border-radius: 12px;
+    padding: 11px 18px;
+    font-size: 13.5px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.3s all;
+}
+
+.banner_section .app_btn li.how_link .how_btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.banner_section .app_btn li.how_link .how_btn i {
+    font-size: 16px;
+}
+
+/* --- 2. how it works, tabs over a panel of steps ----------------------- */
+
+/* both tabs sit inside one rounded container, active one filled */
+.whychoose_section .hiw_tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 30px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 6px;
+}
+
+.whychoose_section .hiw_tab {
+    border: 0;
+    background: transparent;
+    color: var(--body-text);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 13px 30px;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+}
+
+.whychoose_section .hiw_tab:hover {
+    color: var(--primary);
+}
+
+.whychoose_section .hiw_tab.is-active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.whychoose_section .hiw_panel[hidden] {
+    display: none;
+}
+
+/* the steps sit on one tinted panel, separated by thin rules */
+/* the section already sits on the light purple, so the panel is the white
+   surface, keeping the same contrast the reference has the other way round */
+.whychoose_section .hiw_grid {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 36px 10px;
+    box-shadow: 0 4px 22px rgba(50, 35, 111, .05);
+    margin: 0;
+    align-items: stretch;
+}
+
+.whychoose_section .hiw_grid > [class*="col-"] {
+    position: relative;
+    padding: 0 26px;
+}
+
+.whychoose_section .hiw_grid > [class*="col-"]::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    right: 0;
+    width: 1px;
+    background: var(--border);
+}
+
+/* no rule after the last cell of each row of three */
+.whychoose_section .hiw_grid > [class*="col-"]:nth-child(3n)::after,
+.whychoose_section .hiw_grid > [class*="col-"]:last-child::after {
+    display: none;
+}
+
+.whychoose_section .hiw_grid > [class*="col-"]:nth-child(n + 4) {
+    margin-top: 32px;
+}
+
+.whychoose_section .hiw_grid .whychoose_box {
+    height: 100%;
+    margin-bottom: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+    text-align: left;
+}
+
+.whychoose_section .hiw_grid .choose_text {
+    padding-left: 0;
+}
+
+/* icon plate above the step, in the theme's own purple */
+.whychoose_section .hiw_grid .step_icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+    background: var(--white);
+    box-shadow: 0 3px 14px rgba(50, 35, 111, .08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    color: var(--primary);
+    margin-bottom: 18px;
+}
+
+/* the step number becomes a badge beside its heading */
+.whychoose_section .hiw_grid h6 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.whychoose_section .hiw_grid .step_no {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whychoose_section .hiw_grid .step_title {
+    line-height: 1.35;
+}
+
+/* The theme already gives this row a white rounded panel, so the tab wrapper
+   stays transparent and the row itself is the panel, as in the reference.
+   Its colour is the theme's own white on lavender rather than blue and green. */
+.whychoose_section .hiw_panel {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.whychoose_section .hiw_grid {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 36px 26px;
+}
+
+
+/* --- 3. see sov-o in action -------------------------------------------- */
+/* Added 2026-08-22. No card, no panel. Centred heading in the theme's own
+   .section_title, the video below it, store buttons beneath. Same rhythm as
+   every other section on the page. */
+
+/* the hero sits directly above this, so the section needs its own top
+   padding or the heading crowds the hero */
+.action_section {
+    padding-top: 70px;
+}
+
+.action_video {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+}
+
+/* the current clip is a 9:16 phone recording so it is capped by height and
+   centred. A landscape replacement will simply fill the width instead. */
+.action_video video {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 420px;
+    border-radius: 18px;
+    background: #000;
+    box-shadow: 0 16px 40px rgba(50, 35, 111, .20);
+}
+
+.action_btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.action_btn li,
+.action_btn li:last-child {
+    margin: 0;
+}
+
+.action_btn li a {
+    background-color: #000;
+    padding: 0 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    transition: 0.3s all;
+}
+
+.action_btn li a:hover {
+    background-color: #1c1c1c;
+}
+
+.action_btn li a .blue_img {
+    display: none;
+}
+
+.action_btn li a .white_img {
+    position: static;
+    left: auto;
+    transform: none;
+    opacity: 1;
+    height: 26px;
+    width: auto;
+    max-width: none;
+    display: block;
+}
+
+.action_btn li.gp_item a {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+.action_btn li.gp_item a:hover {
+    background: none;
+    opacity: .85;
+}
+
+.action_btn li.gp_item img {
+    display: block;
+    height: 48px;
+    width: auto;
+    max-width: none;
+}
+
+/* --- responsive -------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+    .banner_section .banner_text p {
+        max-width: none;
+    }
+
+
+
+    /* the theme centres the hero text below 991px, so the labels and buttons
+       centre with it instead of hanging left */
+    .banner_section .banner_usp,
+    .banner_section .app_btn {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .whychoose_section .hiw_grid > [class*="col-"]::after {
+        display: none;
+    }
+
+    .whychoose_section .hiw_grid > [class*="col-"]:nth-child(n + 2) {
+        margin-top: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .banner_section .banner_usp {
+        gap: 8px;
+        margin: 20px 0 24px;
+    }
+
+    .banner_section .banner_usp li {
+        font-size: 13px;
+        padding: 9px 13px;
+    }
+
+    .banner_section .app_btn {
+        gap: 10px;
+    }
+
+    .banner_section .app_btn li a,
+    .action_btn li a {
+        padding: 0 16px;
+        height: 43px;
+    }
+
+    .banner_section .app_btn li a .white_img,
+    .action_btn li a .white_img {
+        height: 23px;
+    }
+
+    .banner_section .app_btn li.gp_item img,
+    .action_btn li.gp_item img {
+        height: 43px;
+    }
+
+    .banner_section .app_btn li.how_link .how_btn {
+        padding: 11px 18px;
+        font-size: 13.5px;
+    }
+
+    .whychoose_section .hiw_grid {
+        padding: 24px 14px;
+    }
+
+    .action_video video {
+        max-height: 330px;
+    }
+
+    .whychoose_section .hiw_tab {
+        flex: 1 1 auto;
+        padding: 11px 18px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M95XX3C2');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOV-O — Need help? Have a skill? Start with SOV-O.</title>
+<meta name="description" content="Find local services, flexible opportunities and volunteer work—all in one app. Proudly Canadian, community-powered.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* SOV-O landing page.
+   Sections 3-10 are finished banner artwork. Each carries its real heading
+   text in a .sr-only block for search engines and screen readers, plus
+   transparent .hot anchors over the buttons drawn into the artwork.
+   Images are embedded as data URIs so this stays one portable file; to serve
+   them separately, replace each src with a path such as /img/sec-s3.webp. */
+
+:root{
+  --purple:#6633E6; --purple-deep:#4A1FBF; --purple-ink:#2A1160;
+  --mint:#3EDEA0; --mint-deep:#22B77E;
+  --ink:#1B1235; --body:#5B5470; --hairline:#E8E3F5;
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--mint);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+h1,h2,h3{margin:0;line-height:1.05;letter-spacing:-.02em;font-weight:800}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;
+  font-weight:600;border:2px solid transparent;padding:14px 30px;cursor:pointer;font-size:1rem;
+  transition:transform .15s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-mint{background:var(--mint);color:#0C3D2B}
+.btn-mint:hover{background:#35CB92}
+.btn-purple{background:var(--purple);color:#fff}
+.btn-purple:hover{background:var(--purple-deep)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.65);padding:11px 26px}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px}
+.logo{display:flex;align-items:center}
+.logo img{height:38px;width:auto;display:block}
+.nav-links{display:flex;gap:30px;font-size:.93rem;font-weight:500;color:var(--body)}
+.nav-links a:hover{color:var(--purple)}
+.nav-cta{border:2px solid var(--mint);color:var(--mint-deep);border-radius:999px;
+  padding:9px 20px;font-weight:600;font-size:.9rem}
+.nav-cta:hover{background:#DFF7EC}
+.nav-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;border-radius:2px}
+.nav-drawer{display:none;border-top:1px solid var(--hairline);background:#fff}
+.nav-drawer.open{display:block}
+.nav-drawer a{display:block;padding:13px 24px;font-weight:500;color:var(--body);border-bottom:1px solid var(--hairline)}
+.nav-drawer a:last-child{border-bottom:0;color:var(--purple);font-weight:600}
+@media (min-width:901px){.nav-drawer{display:none!important}}
+
+/* ---------- hero ---------- */
+.hero{background:#4023B4;color:#fff;overflow:hidden}
+.hero-banner{position:relative;max-width:1512px;margin:0 auto;font-size:clamp(10px,1.2vw,18px)}
+.hero-banner > img{width:100%;height:auto}
+.hero-cta{position:absolute;left:3.39%;top:58%;display:flex;flex-direction:column;
+  align-items:flex-start;gap:.72em}
+.hero-cta .btn{font-size:1em;padding:.82em 2.1em;border-width:.11em}
+.hero-cta-row{display:flex;gap:.66em}
+.hero-cta-row .btn{font-size:.92em;padding:.7em 1.7em}
+
+/* mobile hero: hidden but readable on desktop, full copy on small screens */
+.hero-mobile{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap;padding:0}
+.hero-mobile .hero-actions,.hero-mobile .hero-pills,
+.hero-mobile .store-row,.hero-mobile .hero-art{display:none}
+.eyebrow{color:var(--mint);font-weight:700;font-size:.76rem;letter-spacing:.12em;
+  text-transform:uppercase;margin:0 0 16px}
+.hero-mobile h1{font-size:clamp(2.1rem,9vw,3rem);font-weight:800;text-transform:uppercase;line-height:.98}
+.hero-mobile h1 em{font-style:normal;color:var(--mint)}
+.hero-mobile .lede{color:rgba(255,255,255,.88);max-width:34ch;margin:18px 0 24px;font-size:1.02rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-bottom:12px}
+.hero-pills{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:24px}
+.store-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.store{display:inline-flex;align-items:center;gap:9px;background:#000;color:#fff;
+  border-radius:10px;padding:8px 16px 8px 14px}
+.store span{display:block;line-height:1.15}
+.store .s1{font-size:.55rem;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.store .s2{font-size:.9rem;font-weight:600}
+.hero-art{width:100%;height:auto;margin-top:26px}
+
+/* ---------- skills ---------- */
+.skills{padding:64px 0 26px;background:linear-gradient(180deg,#EDE8FC 0%,#fff 78%)}
+.section-title{text-align:center;text-transform:uppercase;color:var(--purple);
+  font-size:clamp(1.6rem,4.2vw,2.9rem);font-weight:800}
+.section-sub{text-align:center;color:var(--body);margin:10px auto 0;max-width:52ch}
+.skills-title-row{position:relative;max-width:720px;margin:0 auto}
+.arrow-hint{position:absolute;right:-46px;top:14px;color:var(--purple)}
+.skill-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:36px}
+.skill{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4}
+.skill img{width:100%;height:100%;object-fit:cover}
+.skill::after{content:"";position:absolute;inset:auto 0 0;height:42%;
+  background:linear-gradient(to top,rgba(26,12,62,.42),rgba(26,12,62,0));pointer-events:none}
+.skill .tag{position:absolute;left:50%;transform:translateX(-50%);bottom:12px;z-index:5;
+  background:var(--purple);color:#fff;font-size:.72rem;font-weight:600;padding:6px 16px;
+  border-radius:999px;white-space:nowrap;box-shadow:0 6px 16px rgba(20,8,60,.25)}
+.skill:nth-child(2) .tag,.skill:nth-child(5) .tag{background:var(--mint);color:#0C3D2B}
+.skill:nth-child(3) .tag{background:#FFC94A;color:#4A2E00}
+
+/* ---------- artwork sections ----------
+   Each section is a finished banner. Clickable regions are transparent
+   anchors positioned over the buttons drawn into the artwork. */
+.band{padding:30px 0}
+.band-img{position:relative;max-width:var(--maxw);margin:0 auto}
+.band-img > img{width:100%;height:auto}
+.band-round > img{border-radius:26px}
+.hot{position:absolute;display:block;border-radius:999px}
+.hot:hover{background:rgba(255,255,255,.14)}
+.hot:focus-visible{outline:3px solid var(--mint);outline-offset:4px}
+.hot-round{border-radius:50%;aspect-ratio:1}
+.band-cta{text-align:center;padding:6px 0 12px}
+
+/* ---------- footer ---------- */
+.foot{border-top:1px solid var(--hairline);padding:28px 0 40px;font-size:.85rem;color:var(--body);margin-top:26px}
+.foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+.foot-links a:hover{color:var(--purple)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){.skill-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:900px){
+  .nav-links{display:none}
+  .nav-toggle{display:block}
+  .arrow-hint{display:none}
+  .hero-banner{display:none}
+  .hero-mobile{position:static;width:auto;height:auto;margin:0;overflow:visible;
+    clip:auto;white-space:normal;padding:38px 0 0}
+  .hero-mobile .hero-actions,.hero-mobile .hero-pills,.hero-mobile .store-row{display:flex}
+  .hero-mobile .hero-art{display:block}
+  .band{padding:20px 0}
+}
+@media (max-width:620px){
+  .wrap{padding:0 18px}
+  .skill-grid{grid-template-columns:repeat(2,1fr)}
+  .band{padding:14px 0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+
+/* ---------- video lightbox ---------- */
+.vbox{position:fixed;inset:0;z-index:999;background:rgba(27,18,53,.9);
+  display:flex;align-items:center;justify-content:center;padding:24px}
+.vbox[hidden]{display:none}
+/* the clip is 16:9, so it is sized by width and capped by height */
+.vbox-inner{width:min(1040px,100%);display:flex;justify-content:center}
+.vbox video{width:100%;height:auto;max-height:80vh;display:block;border-radius:14px;
+  background:#000;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.vbox-close{position:absolute;top:18px;right:22px;width:44px;height:44px;border:0;
+  border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font-size:28px;
+  line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.vbox-close:hover{background:rgba(255,255,255,.28)}
+
+/* on phones the close button overlapped the video and was hard to hit, so it
+   sits above the clip on a solid chip with a proper touch target */
+@media (max-width:760px){
+  .vbox{padding:16px;flex-direction:column;justify-content:center;gap:14px}
+  .vbox-inner{width:100%}
+  .vbox video{max-height:64vh;border-radius:12px}
+  .vbox-close{position:static;align-self:flex-end;width:48px;height:48px;
+    background:rgba(255,255,255,.22);font-size:30px}
+}
+
+/* the header CTA wrapped onto two lines on small phones */
+@media (max-width:900px){
+  .nav-cta{white-space:nowrap;padding:8px 14px;font-size:.82rem;border-width:1.5px}
+}
+@media (max-width:380px){
+  .nav-cta{padding:7px 11px;font-size:.76rem}
+}
+
+/* footer: centre it and even out the link rows on small screens, and make the
+   Yammtech credit read as a link rather than plain text */
+.foot-credit a{color:var(--purple);text-decoration:underline;text-underline-offset:2px}
+.foot-credit a:hover{color:var(--purple-deep)}
+@media (max-width:760px){
+  .foot{padding:24px 0 32px}
+  .foot-in{flex-direction:column;align-items:center;text-align:center;gap:16px}
+  .foot-links{justify-content:center;gap:14px 20px;line-height:2}
+}
+
+/* the nav is sticky, so anchored sections need to stop clear of it */
+#how,#download,#find-help,#offer,#trust{scroll-margin-top:96px}
+
+/* The store badges are drawn into the bottom of the hero artwork, which falls
+   below the fold on a laptop. The banner is cropped to hide them and real
+   buttons sit higher up in .hero-cta instead, so they are visible on load and
+   actually clickable. */
+.hero-banner{aspect-ratio:2300/1118;overflow:hidden}
+.hero-banner > img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-cta{top:auto;bottom:19%}
+.hero-cta .store-row{display:flex;gap:.7em;flex-wrap:wrap}
+.hero-cta .store{font-size:.9em}
+
+/* ---------- download dialog ---------- */
+.dl{position:fixed;inset:0;z-index:1000;background:rgba(27,18,53,.86);
+  display:flex;align-items:center;justify-content:center;padding:20px}
+.dl[hidden]{display:none}
+.dl-panel{position:relative;background:#fff;border-radius:22px;padding:34px 30px 30px;
+  width:min(440px,100%);max-height:92vh;overflow-y:auto;text-align:center;
+  box-shadow:0 28px 70px rgba(0,0,0,.35)}
+.dl-close{position:absolute;top:12px;right:14px;width:40px;height:40px;border:0;border-radius:50%;
+  background:#F2EFFB;color:var(--ink);font-size:26px;line-height:1;cursor:pointer}
+.dl-close:hover{background:#E6DFFA}
+.dl-panel h2{font-size:1.5rem;margin:0 0 8px}
+.dl-sub{color:var(--body);font-size:.95rem;margin:0 0 22px}
+.dl-stores{display:flex;flex-direction:column;gap:12px}
+.dl-store{display:flex;align-items:center;justify-content:center;gap:12px;
+  background:#000;color:#fff;border-radius:12px;padding:12px 20px;text-decoration:none}
+.dl-store:hover{background:#1c1c1c}
+.dl-store span{display:flex;flex-direction:column;align-items:flex-start;line-height:1.15;
+  font-weight:600;font-size:1.02rem}
+.dl-store small{font-size:.66rem;font-weight:500;opacity:.9}
+/* the QR is pointless on a phone, where tapping the button just works */
+.dl-qr{display:none}
+@media (min-width:1024px){
+  .dl-qr{display:block;margin-top:24px;padding-top:22px;border-top:1px solid var(--hairline)}
+  .dl-qr-hint{font-size:.88rem;color:var(--body);margin:0 0 14px}
+  .dl-qr img{width:190px;height:190px;display:block;margin:0 auto 14px}
+  .dl-qr-switch{display:flex;gap:6px;justify-content:center;background:#F4F1FD;
+    border-radius:999px;padding:5px;width:fit-content;margin:0 auto}
+  .dl-qr-switch button{border:0;background:none;border-radius:999px;padding:8px 18px;
+    font:inherit;font-size:.86rem;font-weight:600;color:var(--body);cursor:pointer}
+  .dl-qr-switch button.is-active{background:var(--purple);color:#fff}
+}
+/* the skill tags are buttons now, but must still look like tags */
+button.tag{border:0;font:inherit;cursor:pointer}
+button.tag:hover{filter:brightness(1.06)}
+</style>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1578152634001623');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1578152634001623&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M95XX3C2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo"><img src="images/logo.png" alt="SOV-O"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#how">How It Works</a>
+      <a href="faq.html">FAQ</a>
+      <a href="business.html">Business</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="#download" class="nav-cta">Download the App</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="nav-drawer" id="mobile-menu" aria-label="Mobile">
+    <a href="#how">How It Works</a>
+    <a href="faq.html">FAQ</a>
+    <a href="business.html">Business Partnership</a>
+    <a href="contact.html">Contact</a>
+    <a href="#download">Download the App</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-mobile">
+    <div class="wrap">
+      <p class="eyebrow">Proudly Canadian. Community-powered.</p>
+      <h1>Need help?<br>Have a skill?<br>Start with <em>SOV-O.</em></h1>
+      <p class="lede">Find local services, flexible opportunities and volunteer work—all in one app.</p>
+      <div class="store-row">
+        <a href="https://apps.apple.com/app/id6746269655" target="_blank" rel="noopener noreferrer" class="store"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg><span><span class="s1">Download on the</span><span class="s2">App Store</span></span></a>
+        <a href="https://play.google.com/store/apps/details?id=com.sovo.example" target="_blank" rel="noopener noreferrer" class="store"><svg width="18" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.9c-.3.3-.5.8-.5 1.4v17.4c0 .6.2 1.1.5 1.4l9.2-10.1L3.6 1.9z" fill="#3EDEA0"/><path d="M16.3 8.4L4.9 1.5c-.5-.3-1-.3-1.3.4l9.2 10.1 3.5-3.6z" fill="#fff"/><path d="M16.3 15.6l-3.5-3.6 9.2-10.1c.4.3.6.8.6 1.4v17.4c0 .6-.2 1-.6 1.3l-5.7-6.4z" fill="#fff" opacity=".6"/><path d="M3.6 22.1c.3.7.8.7 1.3.4l11.4-6.9-3.5-3.6-9.2 10.1z" fill="#fff" opacity=".85"/></svg><span><span class="s1">Get it on</span><span class="s2">Google Play</span></span></a>
+      </div>
+    </div>
+    <img class="hero-art" src="images/landing/img01.webp" alt="">
+  </div>
+
+  <div class="hero-banner">
+    <img src="images/landing/img02.webp" alt="A neighbour posting a request and a local provider offering to help, connected through the SOV-O app.">
+    <div class="hero-cta">
+<div class="store-row">
+        <a href="https://apps.apple.com/app/id6746269655" target="_blank" rel="noopener noreferrer" class="store"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg><span><span class="s1">Download on the</span><span class="s2">App Store</span></span></a>
+        <a href="https://play.google.com/store/apps/details?id=com.sovo.example" target="_blank" rel="noopener noreferrer" class="store"><svg width="18" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.9c-.3.3-.5.8-.5 1.4v17.4c0 .6.2 1.1.5 1.4l9.2-10.1L3.6 1.9z" fill="#3EDEA0"/><path d="M16.3 8.4L4.9 1.5c-.5-.3-1-.3-1.3.4l9.2 10.1 3.5-3.6z" fill="#fff"/><path d="M16.3 15.6l-3.5-3.6 9.2-10.1c.4.3.6.8.6 1.4v17.4c0 .6-.2 1-.6 1.3l-5.7-6.4z" fill="#fff" opacity=".6"/><path d="M3.6 22.1c.3.7.8.7 1.3.4l11.4-6.9-3.5-3.6-9.2 10.1z" fill="#fff" opacity=".85"/></svg><span><span class="s1">Get it on</span><span class="s2">Google Play</span></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="find-help">
+  <div class="wrap">
+    <div class="skills-title-row">
+      <h2 class="section-title">There's a skill for that.</h2>
+      <svg class="arrow-hint" width="40" height="46" viewBox="0 0 40 46" fill="none" aria-hidden="true">
+        <path d="M6 3c14 4 24 14 26 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M24 30l8 4 1-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p class="section-sub">Whatever is on your list, someone nearby may know how to help.</p>
+    </div>
+    <div class="skill-grid">
+        <div class="skill"><img src="images/landing/img03.webp" alt="A home cleaner wiping down a kitchen counter" loading="lazy" width="450" height="600"><button class="tag" type="button" data-dl="Home Help">Home Help</button></div>
+        <div class="skill"><img src="images/landing/img04.webp" alt="A tutor working through a textbook with a student" loading="lazy" width="450" height="600"><button class="tag" type="button" data-dl="Tutoring">Tutoring</button></div>
+        <div class="skill"><img src="images/landing/img05.webp" alt="A home cook stirring a pan of vegetables" loading="lazy" width="450" height="600"><button class="tag" type="button" data-dl="Cooking">Cooking</button></div>
+        <div class="skill"><img src="images/landing/img06.webp" alt="An event helper setting a table at an outdoor dinner" loading="lazy" width="450" height="600"><button class="tag" type="button" data-dl="Events">Events</button></div>
+        <div class="skill"><img src="images/landing/img07.webp" alt="Four volunteers planting seedlings in a community garden" loading="lazy" width="450" height="600"><button class="tag" type="button" data-dl="Volunteering">Volunteering</button></div>
+        <div class="skill"><img src="images/landing/img08.webp" alt="Two hikers looking out over a mountain lake" loading="lazy" width="450" height="600"><button class="tag" type="button" data-dl="Local Experiences">Local Experiences</button></div>
+    </div>
+  </div>
+</section>
+
+<div></div>
+
+  <section class="band">
+    <div class="band-img band-round">
+      <img src="images/landing/img09.webp" alt="A person overwhelmed by laundry, the SOV-O offer review screen, and the same person relaxing afterwards." loading="lazy">
+    </div>
+    <div class="sr-only">
+      <h2>Get the task done. Get your time back.</h2>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="band-img ">
+      <img src="images/landing/img10.webp" alt="Four SOV-O app screens: browsing opportunities, chatting, a confirmed booking, and the payment summary." loading="lazy">
+    </div>
+    <div class="sr-only">
+      <h2>From need to done—in one app.</h2>
+      <ol><li>Post or search</li><li>Connect</li><li>Agree and book</li><li>Pay in one place</li></ol>
+    </div>
+  </section>
+<div id="trust"></div>
+
+  <section class="band">
+    <div class="band-img ">
+      <img src="images/landing/img11.webp" alt="Two SOV-O screens either side of a play button: opportunities nearby, and reviewing an offer." loading="lazy">
+      <a class="hot hot-round" href="#demo-video" aria-label="Watch the app demo" style="left:45%;top:41.9%;width:10%"></a>
+    </div>
+    <div class="band-cta"><a href="#download" class="btn btn-purple">Download SOV-O</a></div>
+    <div class="sr-only">
+      <h2>See SOV-O in action.</h2>
+      <p>Post a need. Explore skills. Connect.</p>
+    </div>
+  </section>
+
+  <section class="band" id="offer">
+    <div class="band-img ">
+      <img src="images/landing/img12.webp" alt="Two cards side by side: a person looking for help, and a person offering a skill." loading="lazy">
+      <a class="hot" href="#download" aria-label="Find Help" style="left:25.8%;top:66.9%;width:10.5%;height:7.8%"></a>
+      <a class="hot" href="#download" aria-label="Offer a Skill" style="left:55.2%;top:66.9%;width:10.6%;height:7.8%"></a>
+    </div>
+    <div class="sr-only">
+      <h2>What brings you to SOV-O?</h2>
+      <p>Choose how you want to get started.</p>
+      <h3>I need help — Find the right person for what you need.</h3>
+      <h3>I have a skill — Your skill has value. What feels ordinary to you may be exactly what someone else needs.</h3>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band-img ">
+      <img src="images/landing/img13.webp" alt="Three SOV-O screens: a provider profile, a chat agreeing on details, and bookings kept in one place." loading="lazy">
+    </div>
+    <div class="sr-only">
+      <h2>Connect before you commit.</h2>
+      <ul><li>Review profiles</li><li>Agree on the details</li><li>Keep it organized</li></ul>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band-img ">
+      <img src="images/landing/img14.webp" alt="A group gathered around a laptop, and volunteers planting in a community garden." loading="lazy">
+    </div>
+    <div class="sr-only">
+      <h2>Born in Canada. Built around community.</h2>
+      <p>Useful skills exist in every community. SOV-O gives them a place to connect.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band-img ">
+      <img src="images/landing/img15.webp" alt="Three placeholder testimonials alongside SOV-O profile and chat screens." loading="lazy">
+    </div>
+    <div class="sr-only">
+      <h2>Real people. Useful skills. More getting done.</h2>
+      <blockquote><p>Luna got the best walk while I met a deadline.</p><cite>Emily, Dog Parent</cite></blockquote>
+      <blockquote><p>Math finally makes sense — and I feel more confident.</p><cite>Noah, Student</cite></blockquote>
+      <blockquote><p>Our community event came together with amazing volunteers.</p><cite>Aisha, Organizer</cite></blockquote>
+    </div>
+  </section>
+<div id="download"></div>
+
+  <section class="band">
+    <div class="band-img ">
+      <img src="images/landing/img16.webp" alt="A person using SOV-O beside the app's sign-in screen, with App Store and Google Play badges." loading="lazy">
+      <a class="hot" href="https://apps.apple.com/app/id6746269655" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" style="left:31.2%;top:77%;width:14.4%;height:8.8%;border-radius:10px"></a>
+      <a class="hot" href="https://play.google.com/store/apps/details?id=com.sovo.example" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play" style="left:46.9%;top:77%;width:15.3%;height:8.8%;border-radius:10px"></a>
+    </div>
+    <div class="sr-only">
+      <h2>Whatever you need. Whatever you can do. There's a place for it on SOV-O.</h2>
+      <p>Find help. Offer a skill. Discover local possibilities.</p>
+    </div>
+  </section>
+
+<footer class="foot" id="faqs">
+  <div class="wrap foot-in">
+    <span class="foot-credit">© 2026 SOV-O. Made in Canada. <a href="https://yammtech.com/" target="_blank" rel="noopener">Platform developed by Yammtech</a></span>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="#how">How It Works</a>
+      <a href="faq.html">FAQ</a>
+      <a href="business.html">Business Partnership</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="refund.html">Refund</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', function(){
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    menu.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+    });
+  })();
+</script>
+
+<!-- Video lightbox. Opened by the play button drawn into the
+     "See SOV-O in action" banner. -->
+<div class="vbox" id="demo-video" hidden>
+  <button class="vbox-close" aria-label="Close video">&times;</button>
+  <div class="vbox-inner">
+    <video id="demoPlayer" controls playsinline preload="none" poster="images/video-poster.jpg?v=2">
+      <source src="videos/sovo-overview.mp4?v=2" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<script>
+(function(){
+  var box=document.getElementById('demo-video');
+  if(!box) return;
+  var player=document.getElementById('demoPlayer');
+  var closeBtn=box.querySelector('.vbox-close');
+  function open(e){ e.preventDefault(); box.hidden=false; document.body.style.overflow='hidden'; }
+  function close(){ box.hidden=true; document.body.style.overflow=''; if(player){player.pause();} }
+  document.querySelectorAll('a[href="#demo-video"]').forEach(function(a){
+    a.addEventListener('click', open);
+  });
+  closeBtn.addEventListener('click', close);
+  box.addEventListener('click', function(e){ if(e.target===box) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !box.hidden) close(); });
+})();
+</script>
+
+<script>
+/* Send the generic Download buttons to the right store for the visitor's
+   device. The href is already the App Store, so this only has to handle
+   Android; with JS disabled everyone still gets a working link. */
+(function(){
+  if(!/android/i.test(navigator.userAgent)) return;
+  var play='https://play.google.com/store/apps/details?id=com.sovo.example';
+  document.querySelectorAll('.js-store').forEach(function(a){ a.href=play; });
+})();
+</script>
+
+<!-- Download dialog, opened from the skill cards -->
+<div class="dl" id="dlModal" hidden role="dialog" aria-modal="true" aria-labelledby="dlTitle">
+  <div class="dl-panel">
+    <button class="dl-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="dlTitle">Download the app</h2>
+    <p class="dl-sub" id="dlSub">Get SOV-O and find someone nearby who can help.</p>
+
+    <div class="dl-stores">
+      <a class="dl-store" href="https://apps.apple.com/app/id6746269655" target="_blank"
+         rel="noopener noreferrer" data-store="appstore">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+        <span><small>Download on the</small>App Store</span>
+      </a>
+      <a class="dl-store" href="https://play.google.com/store/apps/details?id=com.sovo.example" target="_blank"
+         rel="noopener noreferrer" data-store="googleplay">
+        <svg width="20" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.9c-.3.3-.5.8-.5 1.4v17.4c0 .6.2 1.1.5 1.4l9.2-10.1L3.6 1.9z" fill="#3EDEA0"/><path d="M16.3 8.4L4.9 1.5c-.5-.3-1-.3-1.3.4l9.2 10.1 3.5-3.6z" fill="#fff"/><path d="M16.3 15.6l-3.5-3.6 9.2-10.1c.4.3.6.8.6 1.4v17.4c0 .6-.2 1-.6 1.3l-5.7-6.4z" fill="#fff" opacity=".6"/><path d="M3.6 22.1c.3.7.8.7 1.3.4l11.4-6.9-3.5-3.6-9.2 10.1z" fill="#fff" opacity=".85"/></svg>
+        <span><small>Get it on</small>Google Play</span>
+      </a>
+    </div>
+
+    <!-- shown on larger screens only, where the visitor cannot install anything -->
+    <div class="dl-qr">
+      <p class="dl-qr-hint">Scan with your phone to install</p>
+      <img id="dlQr" src="images/qr-appstore.png" alt="QR code linking to SOV-O on the App Store" width="440" height="440">
+      <div class="dl-qr-switch" role="tablist">
+        <button type="button" class="is-active" data-qr="appstore" role="tab" aria-selected="true">App Store</button>
+        <button type="button" data-qr="googleplay" role="tab" aria-selected="false">Google Play</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var modal = document.getElementById('dlModal');
+  if (!modal) return;
+  var panel = modal.querySelector('.dl-panel');
+  var sub = document.getElementById('dlSub');
+  var qr = document.getElementById('dlQr');
+  var closeBtn = modal.querySelector('.dl-close');
+  var lastFocus = null;
+
+  var QR = {
+    appstore: ['images/qr-appstore.png', 'QR code linking to SOV-O on the App Store'],
+    googleplay: ['images/qr-googleplay.png', 'QR code linking to SOV-O on Google Play']
+  };
+
+  function open(label) {
+    lastFocus = document.activeElement;
+    sub.textContent = label
+      ? 'Get SOV-O to find help with ' + label.toLowerCase() + ' near you.'
+      : 'Get SOV-O and find someone nearby who can help.';
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+  function close() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  document.querySelectorAll('.tag[data-dl]').forEach(function (b) {
+    b.addEventListener('click', function () { open(b.getAttribute('data-dl')); });
+  });
+
+  closeBtn.addEventListener('click', close);
+  modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) close(); });
+
+  modal.querySelectorAll('.dl-qr-switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var k = b.getAttribute('data-qr');
+      qr.src = QR[k][0];
+      qr.alt = QR[k][1];
+      modal.querySelectorAll('.dl-qr-switch button').forEach(function (o) {
+        var on = o === b;
+        o.classList.toggle('is-active', on);
+        o.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+    });
+  });
+
+  /* keep focus inside the dialog while it is open */
+  panel.addEventListener('keydown', function (e) {
+    if (e.key !== 'Tab') return;
+    var f = panel.querySelectorAll('a[href], button');
+    if (!f.length) return;
+    var first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+})();
+</script>
+</body>
+</html>

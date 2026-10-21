@@ -1,0 +1,18 @@
+# ==========================================================================
+# Development cache settings, added 2026-08-22
+#
+# While the site is being edited daily, this stops LiteSpeed and the browser
+# from serving stale files. Without it, edits to style.css or any .html page
+# do not appear until the cache is flushed or the URL is changed.
+#
+# BEFORE LAUNCH: delete this whole block, or at minimum remove the
+# CacheDisable line, so visitors get proper caching and faster page loads.
+# ==========================================================================
+
+
+
+
+# Serve .mp4 with the correct type and allow seeking in the video player
+<IfModule mod_mime.c>
+    AddType video/mp4 .mp4
+</IfModule>
